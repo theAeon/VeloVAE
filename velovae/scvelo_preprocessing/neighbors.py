@@ -441,7 +441,7 @@ def get_duplicate_cells(data):
     if len(l_set) < len(l):
         idx_dup = np.array([i for i, x in enumerate(l) if l.count(x) > 1])
 
-        X_new = np.array(X[idx_dup].A if issparse(X) else X[idx_dup])
+        X_new = np.array(X[idx_dup].toarray() if issparse(X) else X[idx_dup])
         sorted_idx = np.lexsort(X_new.T)
         sorted_data = X_new[sorted_idx, :]
 

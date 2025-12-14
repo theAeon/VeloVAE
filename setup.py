@@ -25,5 +25,8 @@ setup(
         'seaborn>=0.10.0',
         'torch>=1.8.0',
         'tqdm<=4.62.3',
+        'igraph>=0.11,<1',
+        'louvain',
+        'leidenalg'
     ]
 )
